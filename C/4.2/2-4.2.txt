@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main(void) {
+  /*Escreva um programa que preencha duas matrizes 2x3 com valores inteiros fornecidos pelo usuário.
+O programa deverá somar as duas matrizes, armazenando o resultado em uma terceira matriz, que
+deverá ser exibida.*/
+
+int i, j, M1[2][3], M2[2][3], M3[2][3];
+printf("Vetor 1\n");
+for(i=0; i<2;i++){
+  for(j=0;j<3; j++){  
+    printf("Valor na linha %d e coluna %d:",i+1,j+1);
+    scanf("%d",&M1[i][j]);
+  }
+}
+printf("Vetor 2\n");
+for(i=0; i<2;i++){
+  for(j=0;j<3; j++){  
+    printf("Valor na linha %d e coluna %d:",i+1,j+1);
+    scanf("%d",&M2[i][j]);
+  }
+}
+for(i=0; i<2;i++){
+  for(j=0;j<3; j++){  
+    M3[i][j]= M1[i][j] + M2[i][j]; 
+  }
+}
+
+printf("Vetor 3:[");
+for(i=0; i<2;i++){
+  for(j=0;j<3; j++){  
+    printf("%d ",M3[i][j]);
+  }
+}
+printf("].");
+
+  return 0;
+}

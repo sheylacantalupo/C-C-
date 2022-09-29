@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(void) {
+/*Escreva um programa que preencha um vetor com 10 elementos inteiros, fornecidos pelo usuário.
+Em seguida, o programa deverá exibir os elementos armazenados no vetor e permitir que o usuário
+selecione um desses elementos para ser removido. Quando isso ocorrer, o programa deverá
+remover o valor e, no momento da remoção, todos os elementos posteriores ao valor removido
+deverão ser reorganizados (movidos uma posição para esquerda) a fim de que o vetor resultante não
+fique com um espaço em branco entre elementos válidos. Por fim, o programa deverá mostrar o
+novo vetor, agora com 9 elementos, apenas.*/
+
+int vetor[10];
+int a=0,x;
+for(a=0; a<10; a++){
+  printf("%dº elemento do vetor:", a+1);
+  scanf("%d",&vetor[a]);
+}
+printf("Vetor: [");
+for(a=0; a<10; a++){
+  printf("%d ", vetor[a]);
+}
+printf("]. \n Qual elemento você deseja remover?");
+scanf("%d",&x);
+
+printf("Vetor:[");
+
+for(a=0; a<10; a++){
+  if(vetor[a]==x){
+  }
+  else{
+    printf("%d ", vetor[a]);
+  }
+}
+printf("].");
+  return 0;
+}

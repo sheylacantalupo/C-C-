@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/*Uma matriz transposta é a matriz que se obtém da troca de linhas por colunas de uma dada matriz.
+Assim, dada uma matriz C de ordem m x n, a matriz transposta dela será representada por Ct
+de ordem n x m onde cada elemento de Ct [i,j] = C [j,i].
+Escreva um programa que preencha uma matriz 4x3 com valores reais fornecidos pelo usuário e
+mostre a sua transposta. Dada uma matriz A de ordem m x n, a matriz transposta dela será
+representada por At de ordem “invertida” n x m.*/
+int main (void)
+{
+  int i,o,r,s, A[3][4],B[4][3];
+  
+  printf("\nMatriz A:\n\n");
+  
+  for(i=0;i<3;i++){
+  	for(o = 0;o<4;o++){
+  		
+  		printf("Linha : %d Coluna : %d  ->",i,o);
+  		scanf("%d",&A[i][o]);
+  		
+  	}
+  }	
+  
+	printf("\nMatriz A(Transporta) : \n\n");
+  		for(r=0;r<4;r++){
+  			for(s=0;s<3;s++){
+  				
+  				B[r][s] = A[s][r];
+  				if(r == 1 && s==0)
+  				{
+  					printf("\n");
+  				}
+  				if(r == 2 && s==0)
+  				{
+  					printf("\n");
+  				}
+  				if(r == 3 && s==0)
+  				{
+  					printf("\n");
+  				}
+  				if(r == 4 && s==0)
+  				{
+  					printf("\n");
+  				}
+  				printf("%d ",B[r][s]);
+  				
+  			}
+  		}
+  	
+  
+  return(0);
+}

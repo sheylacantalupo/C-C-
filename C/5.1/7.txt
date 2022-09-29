@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+int main()
+{
+  char frase[50];
+  int a=0,b=0,I=0,u=0,i,o=0;
+  
+  
+  printf("Insira a frase: ");
+  scanf("%49[^\n]",frase);
+  
+  for(i=0;frase[i]!='\0';i++){
+    if(frase[i]=='a' || frase[i]=='A' ){
+      a++;
+    }
+    else if (frase[i]=='e' || frase[i]=='E'){
+      b++;
+    }
+    else if(frase[i]=='i' || frase[i]=='I'){
+      I++;
+    }
+    else if(frase[i]=='o' || frase[i]=='O'){
+      o++;
+    }
+    else if(frase[i]=='u' || frase[i]=='U'){
+      u++;
+    }
+    
+  }
+  
+  printf("Contem %d vogais a ou A\n",a);
+  printf("Contem %d vogais e ou E\n",b);
+  printf("Contem %d vogais i ou I\n",I);
+  printf("Contem %d vogais o ou O\n",o);
+  printf("Contem %d vogais u ou U\n",u);
+ 
+
+
+  return 0;
+}

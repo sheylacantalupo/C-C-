@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main(void) {
+  /*Escreva um programa que:
+a) leia e armazene os seguintes dados de um conjunto de 100 alunos: matricula, 3 notas;
+b) calcule e armazene a média de cada aluno;
+c) mostre um relatório em que cada linha deverá conter a matrícula, a média e a situação de cada
+aluno (Aprovado se média igual ou superior a 70; Reprovado, se a média for inferior a 70).
+d) mostre a quantidade de alunos aprovados.*/
+int mat[4], i, aprovados=0;
+float nota1[4], nota2[4], nota3[4],media[4];
+
+for(i=0; i<4; i++){
+ printf("Matrícula do aluno %d:",i+1);
+ scanf("%d",&mat[i]);
+ printf("Notas do aluno %d:",i+1);
+ scanf("%f",&nota1[i]);
+ printf("Notas do aluno %d:",i+1);
+ scanf("%f",&nota2[i]);
+ printf("Notas do aluno %d:",i+1);
+ scanf("%f",&nota3[i]);
+media[i]=(nota1[i] + nota2[i] + nota3[i])/3;
+if(media[i]>70){
+  aprovados=aprovados+1;
+}
+}
+printf("Relatório:\n");
+for(i=0; i<4; i++){
+ printf("ALUNO %d Matrícula: %d  Média: %.2f  Situação:",i+1,mat[i],media[i]);
+ if(media[i]>70){
+   printf(" Aprovado!\n");
+ }
+ else{
+   printf(" Reprovado!\n");
+ }
+}
+printf("Total de alunos aprovados: %d", aprovados);
+  return 0;
+}

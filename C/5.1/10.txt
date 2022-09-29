@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+
+int main()
+{ 
+  char frase[50];
+  int i,v=0,a=0,x=0;
+  float porc = 0;
+  
+  printf("Digite a frase: ");
+  scanf("%49[^\n]",frase);
+  
+  
+  for(i=0;frase[i]!='\0';i++){
+    if(frase[i]=='a' || frase[i]=='e' || frase[i]=='i' || frase[i]=='o' || frase[i]=='u'){
+      v++;
+  }else if (isalpha(frase[i])){
+    a++;
+  }
+  }
+  
+  x = a + v;
+  
+  porc =(float)(v*100)/x;
+  
+  printf("%.2f%%",porc);
+  
+
+  
+  return 0;
+}

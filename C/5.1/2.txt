@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+
+  char nome[30];
+  int i;
+  
+  printf("Nome: ");
+  scanf("%31[^\n]", nome);
+  
+  
+  for(i=0;nome[i] !='\0';i++){
+    if((i%2)==0){
+      printf("%c",nome[i]);
+    }
+    
+  }
+
+
+  return 0;
+}

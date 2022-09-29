@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main(void) {
+
+/*Escreva um programa que preencha dois vetores A e B com 10 elementos, cada um, intercale os
+elementos desses dois vetores formando assim um novo vetor C com 20 elementos, em que nas
+posições ímpares de C serão armazenados os elementos de A e nas posições pares, os elementos de
+B. Por fim, o programa deverá mostrar o vetor C.*/
+ int vetorA[10];
+ int vetorB[10];
+ int vetorC[20];
+ int a=0, b=0, c=0;
+
+ for(a=0; a<10; a++){
+  printf("%dº valor do vetor A:", a+1);
+  scanf("%d",&vetorA[a]);
+ }
+ for(b=0; b<10; ++b){
+   printf("%dº valor do vetor B:", b+1);
+  scanf("%d",&vetorB[b]);
+ }
+for(c=0,b=0,a=0; c<20; c++){
+if(c%2==0){
+ vetorC[c]=vetorB[b];
+ b=b+1;
+}
+else {
+vetorC[c]=vetorA[a];
+a=a+1;
+}
+}
+printf("Vetor C=[");
+for(c=0; c<20; c++){
+  printf("%d ",vetorC[c]);
+}
+printf("].");
+  return 0;
+}

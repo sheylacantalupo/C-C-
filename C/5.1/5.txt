@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+
+int main()
+{
+ char frase[50];
+ int i,v = 0,cs = 0,num = 0,car = 0;
+ 
+ 
+ printf("Insira a frase: ");
+ scanf("%49[^\n]",frase);
+ 
+ for(i=0;frase[i]!='\0';i++){
+   if(frase[i]=='a' ||frase[i]=='e' || frase[i]=='i' || frase[i]=='o' || frase[i]=='u'){
+     v++;
+   }
+   else if(isalpha(frase[i])){
+     cs++;
+   }
+   else if(isdigit(frase[i])){
+     num++;
+   }
+   else{
+     car++;
+   }
+ }
+ printf("contem %d vogais\n",v);
+ printf("contem %d consoantes\n",cs);
+ printf("contem %d numeros\n",num);
+ printf("contem %d caracteres especiais",car);
+ 
+ 
+  return 0;
+}

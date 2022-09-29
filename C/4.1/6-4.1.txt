@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(void) {
+  
+  /*Escreva um programa que deverá ler e armazenar em um vetor A os seis números do último sorteio
+da Mega-Sena. Em seguida, o programa deverá ler e armazenar em um vetor B os 10 números
+correspondente a uma aposta. Por fim, o programa deverá exibir quantos números o apostador
+acertou.*/
+
+int ultimo_sorteio[6];
+int aposta[10];
+int i=0,j=0, acertos=0;
+
+for(i=0; i<6; ++i){
+  printf("%d° número sorteado:",i+1);
+  scanf("%d",&ultimo_sorteio[i]);
+}
+for(j=0;j<10;++j){
+
+  printf("%d° número da aposta:",j+1);
+  scanf("%d",&aposta[j]);
+}
+for(j=0; j<10; ++j){
+for(i=0; i<6; ++i){
+  if(ultimo_sorteio[i]==aposta[j]){
+    acertos=acertos +1;
+  }
+   }
+}
+printf("Número de acertos:%d",acertos);
+  return 0;
+}

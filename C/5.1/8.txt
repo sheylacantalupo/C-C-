@@ -1,0 +1,26 @@
+#include stdio.h
+
+Compiler version gcc  6.3.0
+
+int main()
+{
+  char nome[30];
+  int i;
+  
+  
+  printf(Informe o nome );
+  scanf(%c[^n],nome);
+  
+  printf(n);
+  
+ for(i=0;nome[i]!='0';i++){
+   
+   if(nome[0]== 'a'  nome[0]== 'A'){
+    
+    printf(%c,nome[i]); } 
+    else{
+      printf(Entrada inválida!);break;
+    }
+    
+   }
+ 

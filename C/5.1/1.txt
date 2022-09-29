@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{ 
+  char nome[30];
+  int x;
+
+  printf("Informe o nome: ");
+  scanf("%30[^\n]",nome);
+  
+  for(x=0;x<4;x++){
+    printf("%c",nome[x]);
+  }
+
+
+  return 0;
+}

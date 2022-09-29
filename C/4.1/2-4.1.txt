@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void) {
+/*Escreva um programa que crie um vetor com 10 posições, leia um número inteiro fornecido pelo
+usuário e preencha o vetor com esse número e seus múltiplos. Por exemplo, caso o usuário digite o
+número 5, o vetor deverá ser preenchido com 5, 10, 15, 20...*/
+
+int vetor[10];
+int a;
+int i;
+int multiplicador=1;
+
+printf("Insira um valor:\n");
+scanf("%d",&a);
+
+printf("Múltiplos:\n");
+
+for(i=0;i<10;++i){
+ 
+ vetor[i]=a*multiplicador;
+ multiplicador ++;
+printf("%d\n",vetor[i]);
+
+}
+
+  return 0;
+}

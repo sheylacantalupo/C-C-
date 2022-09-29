@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(void) {
+  int i, j, matriz[3][3], soma=0; 
+
+  for (i=0; i<3; i++){
+    for (j=0; j<3; j++){
+      printf("\nInsira um numero da matriz:");
+      scanf("%d", &matriz[i][j]);}}
+
+  for (i=0; i<3; i++){
+    for (j=0; j<3; j++){  
+  printf("%d ", matriz[i][j]);}
+  printf("\n");}
+
+  for (i=0; i<3; i++){
+    for (j=0; j<3; j++){ 
+    soma+= matriz[i][j];}}
+  
+  if (soma<=3){
+    for (i=0; i<3; i++){
+      for (j=0; j<3; j++){ 
+      if (matriz[i][j] == (0 || 1)){
+        printf("\nÉ uma matriz de permutação!");}}}}
+  else{
+  printf("\nNão é uma matriz de permutação!");}
+  return 0;
+}

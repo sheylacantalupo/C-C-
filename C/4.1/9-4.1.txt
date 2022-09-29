@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(void) {
+
+int zona[4];
+int titulo[4];
+char voto[4];
+int x=0, y=0, cont_afavor=0, cont_contra=0, z;
+
+for(x=0;x<4;x++){
+ 
+ printf("%dº Eleitor-\nZona eleitoral:",x+1);
+ scanf("%d",&zona[x]);
+ printf("Título do eleitor:");
+ scanf("%d",&titulo[x]);
+ printf("Voto:(S/N)?");
+ scanf(" %c",&voto[x]);
+  if(voto[x]=='s'){
+   cont_afavor=cont_afavor +1;
+  }
+  else{
+    cont_contra=cont_contra +1;
+  }
+}
+  printf("Total de eleitores que votaram a favor: %d\n", cont_afavor);
+  printf("Total de eleitores que votaram contra:%d\n",cont_contra);
+
+  printf("Zona:");
+  scanf("%d",&z);
+ 
+ for(y=0,x=0; x<4;x++){
+
+ if(z==zona[x]){
+   for(y=0;y<4; y++){
+    if(voto[y]=='s'){
+      printf("%d", titulo[y]);
+    }
+   }
+ }
+ }
+
+
+  return 0;
+}

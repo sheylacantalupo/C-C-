@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{
+  char nome[30];
+  char sexo;
+  int i,id;
+  
+  printf("Nome: ");
+  scanf("%29[^\n]",nome);
+  
+  printf("Sexo: F ou M ");
+  scanf(" %c",&sexo);
+  
+  printf("Idade: ");
+  scanf("%d",&id);
+  
+  printf("\n");
+  
+  if(sexo=='F' && id<18){
+    for(i=0;nome[i] !='\0';i++){
+      printf("%c",nome[i]);
+    }
+    printf("\n\nAceita.");
+    
+  }
+  else{
+    printf("NÃO ACEITA");
+  }
+  
+  
+  
+  return 0;
+}

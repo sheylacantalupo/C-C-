@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main(void) {
+
+/*Escreva um programa que preencha uma matriz 3x3 com valores reais fornecidos pelo usuário. O
+programa deverá exibir:
+a) A soma dos elementos da primeira linha da matriz
+b) A soma dos elementos da terceira coluna da matriz
+c) A soma dos elementos da diagonal principal da matriz*/
+
+
+int M[3][3],i=0, k=0,z,soma1=0, soma2=0,soma3=0;
+
+for(i=0;i<3; i++ ){ 
+
+   for(k=0; k<3;k++){
+printf(" linha %d e coluna %d:",i+1,k+1);
+  scanf("%d",&M[i][k]);
+    }
+}
+for(z = 0;z<3;z++){
+  
+  soma1=soma1+M[0][z];
+  soma2=soma2+M[z][2];
+  soma3=soma3+M[z][z];
+}
+printf("a)%d \nb)%d \nc)%d",soma1,soma2, soma3);
+  return 0;
+}

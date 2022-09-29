@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+  char nome[30];
+  int i,letras=0;
+  
+  
+  printf("Insira o nome: ");
+  scanf("%29[^\n]", nome);
+  
+  for(i=0; nome[i]!='\0';i++){
+    if(isalpha(nome[i])){
+      letras++;
+    }
+  }
+  
+  printf("O nome contém %d letras",letras);
+  
+  return 0;
+}

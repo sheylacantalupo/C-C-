@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+
+
+int main()
+{
+  char nome[30];
+  int i,tam=0;
+  
+  printf("Digite o nome:");
+  gets(nome);
+  
+  tam = strlen(nome);
+  
+  for(i=0;i<=tam;i++){
+    printf("%c",nome[i]);
+  }
+  
+  
+  
+  return 0;
+}

@@ -1,0 +1,49 @@
+#include <stdio.h>
+  int main(void) {
+  int i, j;
+  int tabela[4][6], maior=0, ano, linha;
+  float soma=0, media=0;
+
+
+  for(i=0; i<4; i++){
+    printf("%d° Fabricante:\n", i+1);
+    for(j=0; j<6; j++){
+  printf("Vendas no ano de %d:\n", 2011+j);
+  scanf("%d", &tabela[i][j]);
+  }}
+
+  for(i=0; i<4; i++){
+    for(j=0; j<6; j++){
+      printf("%d ", tabela[i][j]);}
+      printf("\n");}
+  
+  linha=1; 
+  
+    for(j=0; j<6; j++){// maior fabricante.
+    maior = tabela[0][j];
+      for(i=0; i<4; i++){
+      if (tabela[i][j]>maior){
+        maior = tabela[i][j];
+        linha = i+1;  }} 
+    printf("\n O fabricante com maior numero de vendas no %d ano, foi o vendedor: %d",2011+j ,linha); }
+
+    for(j=0; j<6; j++){// ano com mais vendas
+      soma = 0;
+      for(i=0; i<4; i++){
+        soma+= tabela[i][j];}
+        if (j==0){
+          ano = soma;
+          maior = j;}
+        if (soma> ano){
+          maior = j;}}
+    printf("\nO ano com maior numero de vendas: %d", 2011 + maior);
+
+     for(i=0; i<4; i++){
+       soma =0;
+      for(j=0; j<6; j++){
+      soma+= tabela[i][j];
+      media = soma/ (j+1);} 
+      printf("\n O vendedor %d teve uma media de %.f vendas no periodo apresentado", i+1, media);
+      }
+  return 0;
+}

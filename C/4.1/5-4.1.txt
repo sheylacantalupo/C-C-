@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main(void) {
+
+/*Escreva um programa que armazene as notas de 40 alunos de uma turma. Calcule a média da turma
+e mostre a quantidade de alunos com notas acima da média, igual a média e abaixo da média.*/
+
+float notas[4];
+int alunos=0, i=0;
+float total_notas=0, media;
+int cont_acima=0, cont_igual=0, cont_abaixo=0;
+
+for(alunos=0; alunos<4; ++alunos){
+ 
+ printf("Digite a nota do aluno:");
+ scanf("%f",&notas[alunos]);
+  total_notas=total_notas+ notas[alunos];
+}
+  media= total_notas/4;
+  /*printf("Média das notas=%.2f\n", media);*/
+  
+  for(i=0; i<4; ++i){
+   
+   if(notas[i]>media){
+     cont_acima=cont_acima + 1;
+   }
+     else{
+       if(notas[i]==media){
+         cont_igual=cont_igual +1;
+       }
+       else{
+         cont_abaixo=cont_abaixo +1;
+       }
+     }
+  }
+  printf("Número de alunos com nota acima da média:%d\n",cont_acima);
+  printf("Número de alunos com nota igual a média:%d\n",cont_igual);
+  printf("Número de alunos com nota abaixo da média:%d",cont_abaixo);
+  return 0;
+}
